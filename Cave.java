@@ -25,6 +25,29 @@ public class Cave {
         this.caveman = new Caveman("Grog",(int)(Math.random() * this.size),(int)(Math.random() * this.size));
     }
     
+    public void handleInput(String input) {
+        if (input.trim().equalsIgnoreCase("up")) {
+            caveman.moveUp();
+        }
+        else if (input.trim().equalsIgnoreCase("down")) {
+            caveman.moveDown();
+        }
+        else if (input.trim().equalsIgnoreCase("left")) {
+            caveman.moveLeft();
+        }
+        else if (input.trim().equalsIgnoreCase("right")) {
+            caveman.moveRight();
+        }
+        else if (input.trim().equalsIgnoreCase("close")) {
+            System.exit(0);
+        }
+        else {
+            System.out.println("(command not valid)");
+        }
+        
+        System.out.println(caveman.toString());
+    }
+    
     public String toString() {
         return ""+size;
     }
