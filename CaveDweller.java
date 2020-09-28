@@ -5,6 +5,8 @@
  */
 package cavedweller;
 
+import java.util.Scanner;
+
 /**
  *
  * @author jword
@@ -19,6 +21,12 @@ public class CaveDweller {
         cave.caveman.speak();
         System.out.println(cave.toString());
         System.out.println(cave.caveman.toString());
+        
+        Scanner kboard = new Scanner(System.in);
+        String input = kboard.nextLine();
+        if (input.equalsIgnoreCase("up")) {
+            cave.caveman.moveUp();
+        }
     }
     
 }
