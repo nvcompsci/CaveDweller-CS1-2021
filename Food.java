@@ -3,43 +3,42 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package cavedweller;
+package cavedwellerkrishna;
 
 /**
  *
- * @author jword
+ * @author 718618
  */
 public class Food {
     //Fields
-    private String name;
-    private int x, y, hpChange;
+    private String food;
+    private int x, y, nourishment;
     private boolean eaten;
-    //Constructor
-    
-    //Methods
-    public String toString() {
-        return "";
-    }
-    //Accessors
-
-    public String getName() {
-        return name;
-    }
-
-    public int getX() {
-        return x;
-    }
-
-    public int getY() {
-        return y;
-    }
-
-    public int getHPChange() {
-        return hpChange;
-    }
-
-    public boolean isEaten() {
-        return eaten;
-    }
-    
+    // Constructor
+     public Food (String food, int x,int y) {
+     this.food = food;
+     this.x = x;
+     this.y = y;
+     this.nourishment = 100;
+     this.eaten = false;
+     }   
+      //Methods
+     public void food() {
+         System.out.println("Me Get food");
+     }
+     public String toString() {
+         return "x: "+x+", y: "+y;
+     }
+     public void position() {
+         y = 0;
+     }
+     //Accessors - getters and setters
+     public String eaten() {
+         return food;
+     }
+     public int getEffect() {
+         return nourishment;
+     }
+     
+     
 }
