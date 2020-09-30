@@ -7,7 +7,7 @@ package cavedweller;
 
 /**
  *
- * @author jword
+ * @author 800061
  */
 public class Bat {
     

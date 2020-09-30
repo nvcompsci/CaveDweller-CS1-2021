@@ -1,45 +1,38 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package cavedweller;
 
 /**
  *
- * @author jword
+ * @author Oliver Qian
  */
 public class Food {
     //Fields
     private String name;
-    private int x, y, hpChange;
+    private int x, y, nourishment;
     private boolean eaten;
     //Constructor
-    
-    //Methods
-    public String toString() {
-        return "";
+    public Food (String name, int x, int y) {
+        this.name = name;
+        this.x = x;
+        this.y = y;
+        this.nourishment = (int) (Math.random()*11)+5;
+        this.eaten = false;
     }
-    //Accessors
-
+    //Methods
+    
+    //Accessors - getters and setters
     public String getName() {
         return name;
     }
-
-    public int getX() {
+    public int getX(){
         return x;
     }
-
     public int getY() {
         return y;
     }
-
-    public int getHPChange() {
-        return hpChange;
+    public int getNourishment() {
+        return nourishment;
     }
-
     public boolean isEaten() {
         return eaten;
     }
-    
 }
