@@ -7,24 +7,24 @@ package cavedweller;
 
 /**
  *
- * @author jword
+ * @author 802967
  */
 public class Food {
     //Fields
+    private int x, y, nourishment;
     private String name;
-    private int x, y, hpChange;
     private boolean eaten;
     //Constructor
-    
+    public Food (String name, int x, int y) {
+        this.name = name;
+        this.x = x;
+        this.y = y;
+        this.nourishment = 5;
+        this.eaten = false;
+    }
     //Methods
-    public String toString() {
-        return "";
-    }
+    
     //Accessors
-
-    public String getName() {
-        return name;
-    }
 
     public int getX() {
         return x;
@@ -32,14 +32,6 @@ public class Food {
 
     public int getY() {
         return y;
-    }
-
-    public int getHPChange() {
-        return hpChange;
-    }
-
-    public boolean isEaten() {
-        return eaten;
     }
     
 }
