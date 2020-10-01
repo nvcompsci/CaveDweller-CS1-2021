@@ -22,6 +22,13 @@ public class Cave {
         return "size: "+size;
     }
     
+    public void cavemanVsFood(Food food) {
+        if (caveman.getY() == food.getY() &&
+            caveman.getX() == food.getX()) {
+            caveman.eat(food);
+        }
+    }
+    
     public void handleInput(String input) {
         if (input.trim().equalsIgnoreCase("up")) {
             caveman.moveUp();
@@ -43,6 +50,7 @@ public class Cave {
         }
         
         System.out.println(caveman.toString());
+        cavemanVsFood(food1);
     }
 }
 

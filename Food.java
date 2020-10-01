@@ -26,6 +26,30 @@ public class Food {
     
     //Accessors
 
+    public String getName() {
+        return name;
+    }
+
+    public int getX() {
+        return x;
+    }
+
+    public int getY() {
+        return y;
+    }
+
+    public int getNourishment() {
+        return nourishment;
+    }
+
+    public boolean isEaten() {
+        return eaten;
+    }
+
+    public void setEaten(boolean eaten) {
+        this.eaten = eaten;
+    }
+
     
     
 }
