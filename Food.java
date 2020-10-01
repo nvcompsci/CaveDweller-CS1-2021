@@ -35,4 +35,7 @@ public class Food {
     public boolean isEaten() {
         return eaten;
     }
+    public void setEaten(boolean eaten) {
+        this.eaten = eaten;
+    }
 }

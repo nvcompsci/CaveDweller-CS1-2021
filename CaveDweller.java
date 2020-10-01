@@ -18,8 +18,8 @@ public class CaveDweller {
        while(!input.equals ("close")) {
         input = kboard.nextLine();
         cave.handleInput(input);
-        //cave.caveman.speak();
        }
+        //cave.caveman.speak();
     }
     
 }

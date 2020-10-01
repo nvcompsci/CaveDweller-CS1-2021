@@ -24,6 +24,11 @@ public class Cave {
     public String toString() {
         return "size: "+size;
     }
+    public void cavemanVsFood(Food food) {
+        if (caveman.getY() == food.getY() && caveman.getX() == food.getX()) {
+            caveman.eat(food);
+        }
+    }
     //Accessors - getters and setters
     public void handleInput(String input){
         if (input.trim().equalsIgnoreCase ("up")) {
@@ -45,6 +50,7 @@ public class Cave {
             System.out.println("Invalid Command");
         }
         System.out.println(caveman.toString());
+        cavemanVsFood(food1);
     }
 
 }

@@ -39,6 +39,11 @@ public void moveRight() {
 public void moveLeft() {
     x-= 1;
 }
+public void eat(Food food) {
+    this.hp += food.getNourishment();
+    food.setEaten(true);
+    System.out.println("Me eat "+food.getName());
+}
 //Accessors - getters and setters
 public String getName(){
     return name;
