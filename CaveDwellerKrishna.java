@@ -20,6 +20,7 @@ public class CaveDwellerKrishna {
     while (!input.equals("close")) {
         input = kboard.nextLine();
         cave.handleInput(input);
+       
     }
         //cave.caveman.speak();
     }

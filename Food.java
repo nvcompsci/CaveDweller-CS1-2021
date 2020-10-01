@@ -11,12 +11,12 @@ package cavedwellerkrishna;
  */
 public class Food {
     //Fields
-    private String food;
+    private String name;
     private int x, y, nourishment;
     private boolean eaten;
     // Constructor
      public Food (String food, int x,int y) {
-     this.food = food;
+     this.name = food;
      this.x = x;
      this.y = y;
      this.nourishment = 100;
@@ -32,13 +32,43 @@ public class Food {
      public void position() {
          y = 0;
      }
+
+    public String getFood() {
+        return name;
+    }
+
+    public int getX() {
+        return x;
+    }
+
+    public int getY() {
+        return y;
+    }
+
+    public int getNourishment() {
+        return nourishment;
+    }
+
+    public boolean isEaten() {
+        return eaten;
+    }
      //Accessors - getters and setters
+    public String getName() {
+        return name;
+        
+    }
      public String eaten() {
-         return food;
+         return name;
      }
      public int getEffect() {
          return nourishment;
      }
+
+    public void setEaten(boolean eaten) {
+        this.eaten = eaten;
+    }
+
+    
      
      
 }
