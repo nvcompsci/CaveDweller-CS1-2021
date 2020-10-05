@@ -1,28 +1,32 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package cavedweller;
 
 /**
  *
- * @author jword
+ * @author John Word
  */
 public class Cave {
-    private double temp;
+    //encapsulation
     private int size;
     private Caveman caveman;
-    private Bat bat;
-    private Key key;
     private Food food1;
-    private Door door;
+    private Food food2;
     
     public Cave() {
-        this.temp = Math.random() * 100;
-        this.size = (int) (Math.random() * 11) + 6;
+        this.size = (int)(Math.random()*9) + 8;
         //instantiate
-        this.caveman = new Caveman("Grog",(int)(Math.random() * this.size),(int)(Math.random() * this.size));
+        this.caveman = new Caveman("Unga",(int)(Math.random() * size), (int) (Math.random() * size));
+        this.food1 = new Food("banana",(int)(Math.random() * size), (int) (Math.random() * size));
+    }
+    
+    public String toString() {
+        return "size: "+size;
+    }
+    
+    public void cavemanVsFood(Food food) {
+        if (caveman.getY() == food.getY() &&
+            caveman.getX() == food.getX()) {
+            caveman.eat(food);
+        }
     }
     
     public void handleInput(String input) {
@@ -42,14 +46,12 @@ public class Cave {
             System.exit(0);
         }
         else {
-            System.out.println("(command not valid)");
+            System.out.println("(invalid command)");
         }
         
         System.out.println(caveman.toString());
+        cavemanVsFood(food1);
     }
-    
-    public String toString() {
-        return ""+size;
-    }
-    
 }
+
+
