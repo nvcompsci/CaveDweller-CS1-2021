@@ -10,5 +10,10 @@ package cavedweller;
  * @author jword
  */
 public class Door {
+    private int x, y;
     
+    public Door (int x, int y) {
+        //5. set Door instance variables
+        
+    }
 }
