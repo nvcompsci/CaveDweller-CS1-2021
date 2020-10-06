@@ -42,8 +42,20 @@ public class Cave {
         }
         //7. Write more if statements to handle collision between caveman and other objects
         //7.a change the code below for food1
-        if (caveman.getX() == food1.getX() && caveman.getY() == food1.getY()) {
-            caveman.eat(food1);
+        if (caveman.getX() == food2.getX() && caveman.getY() == food2.getY()) {
+            caveman.eat(food2);
+        }
+        if (caveman.getX() == bat1.getX() && caveman.getY() == bat1.getY()) {
+            bat1.bite(caveman);
+        }
+        if (caveman.getX() == bat2.getX() && caveman.getY() == bat2.getY()) {
+            bat2.bite(caveman);
+        }
+        if (caveman.getX() == key.getX() && caveman.getY() == key.getY()) {
+            caveman.pickUpKey();
+        }
+        if (caveman.getX() == door.getX() && caveman.getY() == door.getY()) {
+            caveman.openDoor();
         }
     }
     
@@ -66,13 +78,15 @@ public class Cave {
         else {
             System.out.println("(command not valid)");
         }
+        makeBatsMove();
         checkCollisions();
         System.out.println(caveman.toString());
     }
     
     //8. Implement method MakeBatsMove
     private void makeBatsMove() {
-        
+        bat1.moveAround();
+        bat2.moveAround();
     }
     
     public String toString() {

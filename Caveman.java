@@ -55,7 +55,19 @@ public class Caveman {
     }
     
     //10. Implement method pickUpKey
+    public void pickUpKey() {
+        hasKey = true;
+    }
     
+    public void openDoor() {
+        if (hasKey == true) {
+            System.out.println("Caveman escaped!");
+            System.exit(0);
+        }
+        else {
+            System.out.println("You haven't found the key yet.");
+        }
+    }
     
     //Accessors - getters & setters
     public void setHP(int hp) {
