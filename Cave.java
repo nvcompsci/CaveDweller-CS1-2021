@@ -26,8 +26,12 @@ public class Cave {
         //instantiate
         this.caveman = new Caveman("Grog",(int)(Math.random() * this.size),(int)(Math.random() * this.size));
         this.food1 = new Food("banana",(int)(Math.random() * this.size),(int)(Math.random() * this.size));
-        //6. Instantiate food2, bat1, bat2, door
-        
+        //6. Instantiate food2, bat1, bat2, door, key
+        this.food2 = 
+        this.bat1 = new Bat((int)(Math.random() * this.size),(int)(Math.random() * this.size));
+        this.bat2 = 
+        this.door = 
+        this.key =        
         //EX. Improve placement of door above to only place on walls
         
     }
@@ -37,7 +41,10 @@ public class Cave {
             caveman.eat(food1);
         }
         //7. Write more if statements to handle collision between caveman and other objects
-        
+        //7.a change the code below for food1
+        if (caveman.getX() == food1.getX() && caveman.getY() == food1.getY()) {
+            caveman.eat(food1);
+        }
     }
     
     public void handleInput(String input) {
