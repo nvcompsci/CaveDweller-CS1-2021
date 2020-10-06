@@ -28,7 +28,7 @@ public class Cave {
         this.food1 = new Food("banana",(int)(Math.random() * this.size),(int)(Math.random() * this.size));
         //6. Instantiate food2, bat1, bat2, door
         
-        //9. Improve placement of door above to only place on walls
+        //EX. Improve placement of door above to only place on walls
         
     }
     

@@ -54,6 +54,9 @@ public class Caveman {
         System.out.println("Me eat "+food.getName());
     }
     
+    //10. Implement method pickUpKey
+    
+    
     //Accessors - getters & setters
     public void setHP(int hp) {
         if (hp <= 100 && hp >= 0) {
