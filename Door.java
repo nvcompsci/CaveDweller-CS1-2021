@@ -7,13 +7,18 @@ package cavedweller;
 
 /**
  *
- * @author jword
+ * @author 807665
  */
 public class Door {
     private int x, y;
     
-    public Door (int x, int y) {
-        //5. set Door instance variables
-        
+    //3.a. Constructor
+    public Door (String name, int x, int y ) {
+        this.name = name;
+        this.x = x;
+        this.y = y;
+        this.hp = 100;
+        this.eaten = false ;
     }
+    //3.b. Accessors 
 }

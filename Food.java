@@ -7,28 +7,25 @@ package cavedweller;
 
 /**
  *
- * @author jword
+ * @author 807665
  */
 public class Food {
-    //Fields
-    private String name;
-    private int x, y, hpChange;
-    private boolean eaten;
+    //Fields - instance variables
+private String name;
+private int x, y, hp;
+private boolean eaten;
     //Constructor
-    public Food(String name, int x, int y) {
+    public Food (String name, int x, int y ) {
         this.name = name;
         this.x = x;
         this.y = y;
-        this.hpChange = 7;
-        this.eaten = false;
+        this.hp = 100;
+        this.eaten = true;
     }
+        //Methods
     
-    
-    //Methods
-    public String toString() {
-        return "";
-    }
-    //Accessors
+    //Accessors - getters and setters    //Accessors - getters and setters  
+C:\Users\807665.SYLVANIA\Documents\NetBeansProjects\CaveDweller\src\cavedweller\Food.java  
 
     public String getName() {
         return name;
@@ -42,8 +39,8 @@ public class Food {
         return y;
     }
 
-    public int getHPChange() {
-        return hpChange;
+    public int getHp() {
+        return hp;
     }
 
     public boolean isEaten() {

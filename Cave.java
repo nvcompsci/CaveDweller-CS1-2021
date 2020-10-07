@@ -7,69 +7,63 @@ package cavedweller;
 
 /**
  *
- * @author jword
+ * @author 807665
  */
 public class Cave {
-    private double temp;
-    private int size;
-    private Caveman caveman;
-    private Bat bat1;
-    private Bat bat2;
-    private Key key;
-    private Food food1;
-    private Food food2;
-    private Door door;
+    //encap
+   private int size;
+  private  Caveman caveman;
+  private  Food food1;
+  private  Food food2;
+  private Bat bat1;
+  private Bat bat2;
+    public Cave(){
+        this.size = (int) (Math.random ()*9)+8;
+        this.caveman = new Caveman("Unga",(int)(Math.random()* size),(int)(Math.random()));
+    this.food1 = new Food("banana",(int)(Math.random()*size),(int)(Math.random()* size));
+    //2. Instantiate bat1 bat2
+    this.bat1 = new Bat((int) (Math.random()*size ),(int)(Math,random())); 
+    this.bat2 =
     
-    public Cave() {
-        this.temp = Math.random() * 100;
-        this.size = (int) (Math.random() * 2) + 4;
-        //instantiate
-        this.caveman = new Caveman("Grog",(int)(Math.random() * this.size),(int)(Math.random() * this.size));
-        this.food1 = new Food("banana",(int)(Math.random() * this.size),(int)(Math.random() * this.size));
-        //6. Instantiate food2, bat1, bat2, door
-        
-        //9. Improve placement of door above to only place on walls
-        
     }
-    
-    private void checkCollisions() {
-        if (caveman.getX() == food1.getX() && caveman.getY() == food1.getY()) {
-            caveman.eat(food1);
-        }
-        //7. Write more if statements to handle collision between caveman and other objects
-        
-    }
-    
-    public void handleInput(String input) {
-        if (input.trim().equalsIgnoreCase("up")) {
-            caveman.moveUp();
-        }
-        else if (input.trim().equalsIgnoreCase("down")) {
-            caveman.moveDown();
-        }
-        else if (input.trim().equalsIgnoreCase("left")) {
-            caveman.moveLeft();
-        }
-        else if (input.trim().equalsIgnoreCase("right")) {
-            caveman.moveRight();
-        }
-        else if (input.trim().equalsIgnoreCase("close")) {
-            System.exit(0);
-        }
-        else {
-            System.out.println("(command not valid)");
-        }
-        checkCollisions();
-        System.out.println(caveman.toString());
-    }
-    
-    //8. Implement method MakeBatsMove
-    private void makeBatsMove() {
-        
-    }
+
+
     
     public String toString() {
-        return ""+size;
+        return "size";
     }
     
+    public void cavemanVsFood(Food food) {
+        if (caveman.getY() == food.getY() &&
+            caveman.getX() == food.getX ()) {
+            caveman.eat(food);
+        }
+     }
+
+public void handleInput(String input) {
+  if (input.equals("up")) {
+    caveman.moveUp();
+   }
+   else if (input.equals("Down")) {
+    caveman.moveDown();
+
+  }
+   else if (input.equals("Left")) {
+    caveman.moveLeft();
+
+ }
+   else if (input.equals("right")) {
+    caveman.moveRight();
+
+   }
+ 
+   else if (input.equals("close")) {
+    System.exit(0);
+
+   }
+   else { 
+    System.out.println("(invalid command)");
+}
+System.out.println(caveman.toString());
+}
 }

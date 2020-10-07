@@ -1,36 +1,33 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package cavedweller;
 
 /**
  *
- * @author jword
+ * @author 807665
  */
 public class Bat {
-    //Fields - Instance variables
+   
+    Private int x, y, damage;
     private boolean alive;
-    private int x, y, damage;
-    
-    //1. Constructor
+    //1.b. Constructor
     public Bat(int x, int y) {
-        
+        this.x = x;
+        this.y = y;
+        this.damage = 5;
+        this.alive = true;
     }
-    
-    //Methods
-    public void moveAround() {
-        //2.a. increase/decrease x by random number
-        
-        //2.b. increase/decrease y by random number
-        
-    }
-    
-    public void bite(Caveman caveman) {
-        //3. reduce the hp of the caveman
-        
-    }
-    //4. Accessors
-    
+    //1.c Methods
+    public void bite(Caveman caveman){
+            int newHP = caveman.getHp() - damage;
+            caveman.setHp(newHP);
 }
+/**
+ * Makes bat randomly move
+ */ 
+  public void moveAround() {
+    x+= (int) (Math.random() * 3) - 2;
+    y+= ()
+}
+//1.d. Accessors 
+  public int getX() {
+      return x;
+  }

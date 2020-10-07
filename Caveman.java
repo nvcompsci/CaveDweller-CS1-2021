@@ -7,79 +7,56 @@ package cavedweller;
 
 /**
  *
- * @author jword
+ * @author 807665
  */
 public class Caveman {
-    //Fields / Instance variables
-    private String name;
-    private int hp, x, y;
-    private boolean hasKey;
-    
+   //Fields - instance variables
+    String name;
+    int x, y, hp;
+   boolean hasKey;
     //Constructor
-    public Caveman(String name, int x, int y) {
-        this.hp = 100;
-        this.hasKey = false;
+    public Caveman(String name, int x, int y ) {
         this.name = name;
         this.x = x;
         this.y = y;
+        this.hp = 100;
+        this.hasKey = false;
     }
-    //Methods
+        //Methods
     public void speak() {
-        System.out.println("Grr");
-    }
-    
-    public String toString() {
-        return "x: "+x+", y: "+y;
-    }
-    
-    public void moveUp() {
-        //y tracks how far down
-        y -= 1;
-    }
-    
-    public void moveDown() {
-        y += 1;
-    }
-    
-    public void moveLeft() {
-        x -= 1;
-    }
-    
-    public void moveRight() {
-        x += 1;
-    }
+       System.out.println("ugh");
+    }     
     
     public void eat(Food food) {
-        hp += food.getHPChange();
-        System.out.println("Me eat "+food.getName());
+        this.hp += food.getNourishment();
+        food.setEaten(true);
     }
-    
-    //Accessors - getters & setters
-    public void setHP(int hp) {
-        if (hp <= 100 && hp >= 0) {
-            this.hp = hp;
-        }
+    public void moveUp() {
+        y += 1;
     }
-
-    public String getName() {
+     public void moveDown() {
+        y -= 1;
+    } 
+     public void moveRight() {
+        x += 1;
+    }
+     public void moveLeft() {
+        x -= 1;
+    }
+    //Accessors - getters and setters 
+    public String getName () {
         return name;
     }
-
-    public int getHP() {
-        return hp;
-    }
-
-    public int getX() {
-        return x;
-    }
-
-    public int getY() {
-        return y;
-    }
-
-    public boolean isHasKey() {
-        return hasKey;
-    }
     
+    public int getHp () {
+return hp; 
+}
     
+public void setHp(int hp) {
+    if (hp >= 0 && hp <= 100) {
+        this.hp = hp;
+    }
+}
+ 
+
 }

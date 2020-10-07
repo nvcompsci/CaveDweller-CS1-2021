@@ -7,7 +7,7 @@ package cavedweller;
 
 /**
  *
- * @author jword
+ * @author 807665
  */
 public class Key {
     
