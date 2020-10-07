@@ -1,14 +1,14 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package cavedweller;
 
 /**
  *
- * @author jword
+ * @author John Word
  */
 public class Door {
+    private int x, y;
+    
+    //3.a. Constructor
+    
+    //3.b. Accessors
     
 }

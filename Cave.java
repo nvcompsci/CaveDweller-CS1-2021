@@ -19,8 +19,8 @@ public class Cave {
         this.caveman = new Caveman("Unga",(int)(Math.random() * size), (int) (Math.random() * size));
         this.food1 = new Food("banana",(int)(Math.random() * size), (int) (Math.random() * size));
         //2. Instantiate bat1, bat2
-        this.bat1 = new Bat( );
-        this.bat2 = 
+        this.bat1 = new Bat((int) (Math.random() * size), (int) (Math.random() * size));
+        this.bat2 = new Bat((int) (Math.random() * size), (int) (Math.random() * size));
     }
     
     public String toString() {
