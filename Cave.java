@@ -28,6 +28,7 @@ public class Cave {
     //Instantiate bat 1,bat 2
         this.bat1 = new Bat((int)(Math.random()* size), (int)(Math.random() * size));
         this.bat2 = new Bat((int)(Math.random()* size), (int)(Math.random() * size));
+    //Instantiate door and key
         this.door = new Door ((int)(Math.random()* size), (int)(Math.random() * size));
         this.key = new Key ((int)(Math.random()* size), (int)(Math.random() * size));
     }
@@ -56,13 +57,13 @@ public class Cave {
     public void cavemanVsBat1(Bat bat1) {
         if (caveman.getY() == bat1.getY() && 
             caveman.getX() == bat1.getX()) { 
-            caveman.equals(bat1);
+            caveman.bite(bat1);
         }
     }
     public void cavemanVsBat2(Bat bat2) {
         if (caveman.getY() == bat2.getY() && 
             caveman.getX() == bat2.getX()) { 
-            caveman.equals(bat2); 
+            caveman.bite(bat2); 
         }
     }
     public void handleInput(String input) {
