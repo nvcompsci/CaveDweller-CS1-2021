@@ -23,6 +23,16 @@ public class Caveman {
         System.out.println("Ugh");
     }
     
+    public void eat (Food food) {
+        this.hp += food.getNourishment();
+        food.setEaten(true);
+        System.out.println("Me eat "+food.getName());
+    }
+    
+    public void openDoor (Door door) {
+        door.setOpen(true);
+    }
+    
     public String toString () {
         return "x: "+x+", Y: "+y;
     }
@@ -69,6 +79,16 @@ public class Caveman {
     public boolean isHasKey() {
         return hasKey;
     }
+
+    public void setHasKey(boolean hasKey) {
+        this.hasKey = hasKey;
+    }
     
+    public void pickUp () {
+        System.out.println("You found the key.");
+    }
     
+    public void open() {
+        System.out.println("The caveman escaped!");
+    }
 }

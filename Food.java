@@ -33,5 +33,21 @@ public class Food {
     public int getY() {
         return y;
     }
+
+    public int getNourishment() {
+        return nourishment;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setEaten(boolean eaten){
+        this.eaten = eaten;
+    }
+    
+    public String toString () {
+        return "x: "+x+", Y: "+y;
+    }
     
 }
