@@ -28,6 +28,16 @@ public class Caveman {
         food.setEaten(true);
         System.out.println("Me eat "+food.getName());
     }
+    //R.1
+    public void pickUp() {
+        
+        System.out.println("You found the key.");
+    }
+    //R.2
+    public void open() {
+        
+        System.out.println("The caveman escaped!");
+    }
     
     public String toString() {
         return "x: "+x+", y: "+y;

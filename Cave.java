@@ -21,6 +21,8 @@ public class Cave {
         //2. Instantiate bat1, bat2
         this.bat1 = new Bat((int) (Math.random() * size), (int) (Math.random() * size));
         this.bat2 = new Bat((int) (Math.random() * size), (int) (Math.random() * size));
+        //R.3 Instantiate door, key
+        
     }
     
     public String toString() {
@@ -33,6 +35,7 @@ public class Cave {
             caveman.eat(food);
         }
     }
+    //R.4 Define methods cavemanVsBat, cavemanVsDoor, cavemanVsKey
     
     public void handleInput(String input) {
         if (input.trim().equalsIgnoreCase("up")) {
@@ -56,6 +59,8 @@ public class Cave {
         
         System.out.println(caveman.toString());
         cavemanVsFood(food1);
+        //R.5 call cavemanVs... methods
+        
     }
 }
 
