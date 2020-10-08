@@ -1,14 +1,28 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package cavedweller;
+
+package cavedwellerkrishna;
 
 /**
  *
- * @author jword
+ * @author Krishna Saraiya
  */
 public class Key {
+    private int x, y;
+//Constructors
+public Key(int x, int y) {
+        this.x = x;
+        this.y = y;
+    }
+//Accessors
+
+    public int getX() {
+        return x;
+    }
+
+    public int getY() {
+        return y;
+    }
+
     
+
 }
+ 

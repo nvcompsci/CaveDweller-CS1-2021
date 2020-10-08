@@ -12,13 +12,14 @@ public class Caveman {
     
     //Constructor 
     public  Caveman (String name, int x, int y) {
-        this.name = name;
+      this.name = name;
         this.x = x;
         this.y = y;
         this.hp = 100; 
-        this.hasKey = false; 
+        this.hasKey = false;  
         
-    }
+    }      
+ 
     //Methods
     public void speak() {
         System.out.println("Ugh");
@@ -27,6 +28,18 @@ public class Caveman {
         this.hp += food.getNourishment();
         food.setEaten(true);
         System.out.println("Me eat "+food.getName());
+    }
+    public void pickUp(Key key) {
+        hasKey = true;
+        System.out.println("You have found the key! ");
+    }
+    
+    public void open( Door door) {
+        if (hasKey == true) {
+         System.out.println("The Caveman escaped! ");
+        System.exit(0);   
+        }
+        
     }
     
     public String  toString() {
