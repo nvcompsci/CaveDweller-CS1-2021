@@ -44,6 +44,17 @@ public void eat(Food food) {
     food.setEaten(true);
     System.out.println("Me eat "+food.getName());
 }
+public void pickUp(Key key) {
+        hasKey = true;
+        System.out.println("Me find Key!");
+}
+public void open(Door door) {
+    if (hasKey == true) {
+        System.out.println("The Caveman has Escaped!");
+        System.out.println("YOU WIN!");
+        System.exit(0);
+    }
+}
 //Accessors - getters and setters
 public String getName(){
     return name;
