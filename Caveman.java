@@ -31,6 +31,21 @@ public class Caveman {
         this.hp += food.getNourishment();
         food.setEaten(true);
     }
+    public void pickUp(Key key) {
+        hasKey = true;
+        System.out.println("You found the key");
+        
+    }
+    
+    public void open(Door door)
+          if (haskey == true)  
+         System.out.println("The caveman escaped!");
+         System.exit(0);
+   }
+    
+    public String toString() {
+    
+    }
     public void moveUp() {
         y += 1;
     }

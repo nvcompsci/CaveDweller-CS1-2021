@@ -11,10 +11,10 @@ package cavedweller;
  */
 public class Cave {
     //encap
-   private int size;
-  private  Caveman caveman;
-  private  Food food1;
-  private  Food food2;
+  private int size;	   
+    private Caveman caveman;
+    private Food food1;	    
+    private Food food2;
   private Bat bat1;
   private Bat bat2;
     public Cave(){

@@ -10,5 +10,8 @@ package cavedweller;
  * @author 807665
  */
 public class Key {
+    private int x, y;
+    
+    public
     
 }

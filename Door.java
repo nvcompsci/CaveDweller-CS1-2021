@@ -17,8 +17,9 @@ public class Door {
         this.name = name;
         this.x = x;
         this.y = y;
-        this.hp = 100;
-        this.eaten = false ;
     }
     //3.b. Accessors 
+    public int getX() {
+        
+    }
 }
