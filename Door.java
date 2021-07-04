@@ -14,6 +14,16 @@ public class Door {
     
     public Door (int x, int y) {
         //5. set Door instance variables
-        
+        this.x = x;
+        this.y = y;
     }
+
+    public int getX() {
+        return x;
+    }
+
+    public int getY() {
+        return y;
+    }    
+    
 }
